@@ -21,11 +21,15 @@
           </div>
           <div class="right_section box">
             <h2>Image Carousel</h2>
-            <div class="grid">
-              <img src='images/seal1.jpg' alt='Seal 1'/>
-              <img src='images/seal2.jpg' alt='Seal 2'/>
-              <img src='images/seal3.jpg' alt='Seal 3'/>
-              <img src='images/seal4.jpg' alt='Seal 4'/>
+            <div class="carousel">
+                <button class="prev">prev</button>
+                <div class="slides">
+                    <div class="carousel_item visible"><img id="slide_1" src='images/seal1.jpg' alt='Seal 1'/></div>
+                    <div class="carousel_item hidden"><img id="slide_2" src='images/seal2.jpg' alt='Seal 2'/></div>
+                    <div class="carousel_item hidden"><img id="slide_3" src='images/seal3.jpg' alt='Seal 3'/></div>
+                    <div class="carousel_item hidden"><img id="slide_4" src='images/seal4.jpg' alt='Seal 4'/></div>
+                </div>
+                <button class="next">next</button>
             </div>
             <div class="box">
               <p>These are mochis</p>
