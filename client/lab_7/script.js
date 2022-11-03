@@ -77,7 +77,7 @@ function processRestaurants(list) {
 function filterList(array, filterInputValue) {
   return array.filter((item) => {
     const lowerCaseName = item.name.toLowerCase();
-    const lowerCaseQuery = item.name.toLowerCase();
+    const lowerCaseQuery = filterInputValue.toLowerCase();
     return lowerCaseName.includes(lowerCaseQuery);
   });
 }
