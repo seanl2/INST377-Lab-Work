@@ -92,6 +92,11 @@ function initMap() {
   return map;
 }
 
+function markerPlace(array, map) {
+  console.log('markerPlace', array);
+  const marker = L.marker([51.5, -0.09]).addTo(map);
+}
+
 async function mainEvent() {
   /*
         ## Main Event
@@ -100,6 +105,7 @@ async function mainEvent() {
           If you separate your work, when one piece is complete, you can save it and trust it
       */
   const pageMap = initMap();
+
   // the async keyword means we can make API requests
   const form = document.querySelector('.main_form'); // get your main form so you can do JS with it
   const submit = document.querySelector('#get-resto'); // get a reference to your submit button
@@ -145,6 +151,7 @@ async function mainEvent() {
       console.log(event.target.value);
       const newFilterList = filterList(currentList, event.target.value);
       injectHTML(newFilterList);
+      markerPlace(currentList, pageMap);
     });
 
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
@@ -158,6 +165,7 @@ async function mainEvent() {
 
       // And this function call will perform the "side effect" of injecting the HTML list for you
       injectHTML(currentList);
+      markerPlace(currentList, pageMap);
 
       // By separating the functions, we open the possibility of regenerating the list
       // without having to retrieve fresh data every time
