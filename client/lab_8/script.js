@@ -82,6 +82,11 @@ function filterList(array, filterInputValue) {
   });
 }
 
+function initMap() {
+  console.log('initMap');
+  const map = L.map('map').setView([51.505, -0.09], 13);
+}
+
 async function mainEvent() {
   /*
         ## Main Event

@@ -316,8 +316,6 @@
   }
 
 /* MAP STYLES */
-#map { height: 180px; }
-
 #map {
     display: block;
     width: 400px;
