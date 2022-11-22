@@ -102,7 +102,6 @@ function markerPlace(array, map) {
 
   array.forEach((item) => {
     const {coordinates} = item.geocoded_column_1;
-    console.log(item);
     L.marker([coordinates[1], coordinates[0]]).addTo(map);
   });
 }
@@ -161,7 +160,7 @@ async function mainEvent() {
       console.log(event.target.value);
       const newFilterList = filterList(currentList, event.target.value);
       injectHTML(newFilterList);
-      markerPlace(currentList, pageMap);
+      markerPlace(newFilerList, pageMap);
     });
 
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
