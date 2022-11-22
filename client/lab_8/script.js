@@ -97,7 +97,7 @@ function markerPlace(array, map) {
   const marker = L.marker([51.5, -0.09]).addTo(map);
   array.forEach((item) => {
     const {coordinates} = item.geocoded_column_1;
-    L.marker([coordinates[0], coordinates[1]]).addTo(map);
+    L.marker([coordinates[1], coordinates[0]]).addTo(map);
   });
 }
 
