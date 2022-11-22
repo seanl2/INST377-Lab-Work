@@ -315,6 +315,9 @@
       }
   }
 
+/* MAP STYLES */
+#map { height: 180px; }
+
   .lds-ellipsis {
     display: inline-block;
     position: relative;
